@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Pozlar</h1>
+    <p><a href="{% url 'film_create' %}">Film Ekle</a> |
+       <a href="{% url 'kosul_create' %}">Çekim Koşulu Ekle</a> |
+       <a href="{% url 'poz_create' %}">Poz Ekle</a></p>
+    <ul>
+    {% for poz in pozlar %}
+      <li>{{ poz.tarih }} - {{ poz.film }} - {{ poz.kosul }} - {{ poz.notlar }}</li>
+    {% empty %}
+      <li>Henüz kayıt yok.</li>
+    {% endfor %}
+    </ul>
+  </body>
+</html>

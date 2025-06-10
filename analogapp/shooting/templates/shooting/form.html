@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Kaydet</button>
+    </form>
+    <p><a href="{% url 'index' %}">Geri</a></p>
+  </body>
+</html>
